@@ -34,7 +34,7 @@
                             <div class="form-group">
                                <input name="" id="" class="btn btn-primary" type="submit" value="Masuk">
                             </div>
-                            <small>Belum punya akun ?<a href="/register">Daftar </a>Sekarang !</small>
+                            <small>Belum punya akun ? <a href="/register">Daftar </a>Sekarang !</small>
                         </form>
                     </div>
                 </div>
