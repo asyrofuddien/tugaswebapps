@@ -30,10 +30,10 @@ class AuthController extends Controller
             'email' => $req->email,
             'password' => $req->password
         ])){
-            return redirect('/login');
+            return redirect('/');
         }
         else{
-            return "Berhasil Login";
+            return redirect('/home');
         }
     }
 }

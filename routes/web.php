@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\http\Controllers\AuthController;
+use App\http\Controllers\BlogController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,3 +22,7 @@ Route::get('/register',[AuthController::class, 'Daftar']);
 Route::get('/',[AuthController::class, 'login']);
 Route::post('/simpanuser',[AuthController::class, 'simpanuser']);
 Route::post('/cekmasuk',[AuthController::class, 'cekmasuk']);
+
+Route::get('home', [BlogController::class, 'home']);
+Route::get('tentang', [BlogController::class, 'tentang']);
+Route::get('kontak', [BlogController::class, 'kontak']);
