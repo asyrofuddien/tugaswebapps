@@ -17,4 +17,7 @@ use App\http\Controllers\AuthController;
 //Route::get('/', function () {
 //    return view('welcome');
 //});
-Route::get('/',[AuthController::class, 'Daftar']);
+Route::get('/register',[AuthController::class, 'Daftar']);
+Route::get('/',[AuthController::class, 'login']);
+Route::post('/simpanuser',[AuthController::class, 'simpanuser']);
+Route::post('/cekmasuk',[AuthController::class, 'cekmasuk']);

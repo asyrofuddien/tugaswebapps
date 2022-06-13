@@ -15,21 +15,16 @@
             <div class="col-lg-4">
                 <div class="card mt-5">
                     <div class="card-header">
-                        <strong class="text-center d-block">From <span class="text-primary">Pendaftaran</span></strong>
+                        <strong class="text-center d-block">From <span class="text-primary">Masuk</span></strong>
                     </div>
                     <div class="card-body">
                         
-                        <form action="/simpanuser" method="POST">
+                        <form action="/cekmasuk" method="POST">
                             @csrf
-                            <div class="form-group">
-                              <label for="">Nama Pengguna</label>
-                              <input type="text"
-                                class="form-control" name="nama" autofocus required autocomplete="off">
-                            </div>
                             <div class="form-group">
                                 <label for="">Email Address</label>
                                 <input type="email"
-                                  class="form-control" name="email" required autocomplete="off">
+                                  class="form-control" name="email" required autocomplete="off" autofocus>
                             </div>
                             <div class="form-group">
                                 <label for="">Password</label>
@@ -37,9 +32,9 @@
                                   class="form-control" name="password" required autocomplete="off">
                             </div>
                             <div class="form-group">
-                               <input name="" id="" class="btn btn-primary" type="submit" value="Daftar">
+                               <input name="" id="" class="btn btn-primary" type="submit" value="Masuk">
                             </div>
-                            <small>Sudah punya akun ? <a href="/">Masuk </a>Sekarang !</small>
+                            <small>Belum punya akun ? <a href="/register">Daftar </a>Sekarang !</small>
                         </form>
                     </div>
                 </div>
