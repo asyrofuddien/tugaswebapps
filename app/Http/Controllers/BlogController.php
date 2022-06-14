@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\DB;
 class BlogController extends Controller
 {
     public function home(){
+
 		return view('home');
 	}
 

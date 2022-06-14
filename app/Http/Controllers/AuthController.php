@@ -6,6 +6,7 @@ use Alert;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class AuthController extends Controller
 {
@@ -27,6 +28,7 @@ class AuthController extends Controller
     }
 
     public function cekmasuk(Request $req){
+        
         if (!Auth::attempt([
             'email' => $req->email,
             'password' => $req->password
@@ -35,7 +37,9 @@ class AuthController extends Controller
             return redirect('/');
         }
         else{
-            Alert::success('Berhasil Masuk',  'Selamat Datang '.$req->email);
+            $blog = DB::table('users')->where('email', $req->email)->first();
+            Alert::success('Berhasil Masuk',  'Selamat Datang '.$blog->nama);
+            
             return redirect('/home');
         }
     }
