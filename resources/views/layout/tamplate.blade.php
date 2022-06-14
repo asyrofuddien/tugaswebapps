@@ -29,9 +29,9 @@
         <div class="row ml-2">
             <div class="col-3 mt-4 py-3 h-100 d-inline-block border">
                 <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                    <a class="nav-link active" href="/home">Home</a>
-                    <a class="nav-link" href="/mahasiswa">Mahasiswa</a>
-                    <a class="nav-link" href="/tentang">Tentang</a>
+                    <a class="nav-link {{request()->is('home') ? 'active':''}}" href="/home">Home</a>
+                    <a class="nav-link {{request()->is('mahasiswa') ? 'active':''}}" href="/mahasiswa">Data Mahasiswa</a>
+                    <a class="nav-link {{request()->is('tentang') ? 'active':''}}" href="/tentang">Tentang</a>
                 </div>
             </div>
             <div class="col-9 mt-4">

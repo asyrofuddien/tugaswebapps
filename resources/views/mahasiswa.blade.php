@@ -1,10 +1,9 @@
 <!-- Menghubungkan dengan view template master -->
 @extends('layout/tamplate')
 
-@section('title','KONTAK')
+@section('title','Data Mahasiswa')
 <!-- isi bagian judul halaman -->
 <!-- cara penulisan isi section yang pendek -->
-@section('judul', 'Halaman Mahasiswa')
 
 <!-- isi bagian konten -->
 <!-- cara penulisan isi section yang panjang -->
