@@ -25,15 +25,17 @@
                   </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-3 mt-4 py-3 h-100 border">
+        @include('sweetalert::alert')
+        <div class="row ml-2">
+            <div class="col-3 mt-4 py-3 h-100 d-inline-block border">
                 <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                     <a class="nav-link active" href="/home">Home</a>
-                    <a class="nav-link" href="/kontak">Kontak</a>
+                    <a class="nav-link" href="/mahasiswa">Mahasiswa</a>
                     <a class="nav-link" href="/tentang">Tentang</a>
                 </div>
             </div>
             <div class="col-9 mt-4">
+                
                 @yield('konten')
             </div>
          </div>

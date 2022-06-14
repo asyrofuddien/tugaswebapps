@@ -18,7 +18,7 @@
                         <strong class="text-center d-block">From <span class="text-primary">Pendaftaran</span></strong>
                     </div>
                     <div class="card-body">
-                        
+                      @include('sweetalert::alert')
                         <form action="/simpanuser" method="POST">
                             @csrf
                             <div class="form-group">

@@ -1,8 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class BlogController extends Controller
 {
@@ -14,7 +15,10 @@ class BlogController extends Controller
 		return view('tentang');
 	}
 
-	public function kontak(){
-		return view('kontak');
+	public function mahasiswa(){
+
+        $users = DB::table('users')->paginate(10);
+        
+		return view('mahasiswa', ['users' => $users]);
 	}
 }

@@ -25,4 +25,4 @@ Route::post('/cekmasuk',[AuthController::class, 'cekmasuk']);
 
 Route::get('home', [BlogController::class, 'home']);
 Route::get('tentang', [BlogController::class, 'tentang']);
-Route::get('kontak', [BlogController::class, 'kontak']);
+Route::get('mahasiswa', [BlogController::class, 'mahasiswa']);

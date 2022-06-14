@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-
+use Alert;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
@@ -18,6 +18,7 @@ class AuthController extends Controller
             'email' => $req-> email,
             'password' => bcrypt($req-> password)
         ]);
+        Alert::success('Data berhasil terdaftar','Silahkan masuk');
         return redirect('/');
     }
 
@@ -30,9 +31,11 @@ class AuthController extends Controller
             'email' => $req->email,
             'password' => $req->password
         ])){
+            alert()->error('GAGAL','Email atau Password Salah');
             return redirect('/');
         }
         else{
+            Alert::success('Berhasil Masuk',  'Selamat Datang '.$req->email);
             return redirect('/home');
         }
     }
